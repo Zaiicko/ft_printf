@@ -1,35 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_putchar_f.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zaiicko <meskrabe@student.s19.be>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/21 03:40:19 by zaiicko           #+#    #+#             */
-/*   Updated: 2024/05/02 04:16:19 by zaiicko          ###   ########.fr       */
+/*   Created: 2024/05/02 02:07:32 by zaiicko           #+#    #+#             */
+/*   Updated: 2024/05/02 02:30:05 by zaiicko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/ft_printf.h"
 
-int	ft_printf(const char *str, ...)
+int	ft_putchar_f(char c)
 {
-	va_list	arg;
-	size_t	i;
-
-	i = 0;
-	va_start(arg, str);
-	while (*str)
-	{
-		if (*str == '%' && *(str + 1) != '\0')
-		{
-			str++;
-			i += ft_checking(arg, *str);
-		}
-		else
-			i += ft_putchar_f(*str);
-		str++;
-	}
-	va_end(arg);
-	return (i);
+	write(1, &c, 1);
+	return (1);
 }

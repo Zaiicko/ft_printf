@@ -6,7 +6,7 @@
 #    By: zaiicko <meskrabe@student.s19.be>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/21 01:07:41 by zaiicko           #+#    #+#              #
-#    Updated: 2024/04/21 03:38:07 by zaiicko          ###   ########.fr        #
+#    Updated: 2024/05/02 02:33:39 by zaiicko          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,9 @@ LIBFT = $(LIBFT_DIR)/libft.a
 INC_DIR = inc
 INC = -I$(INC_DIR) -I$(LIBFT_DIR)
 
-SRCS = 
+SRCS =	ft_printf.c \
+		ft_checking.c \
+		ft_putchar_f.c \
 
 SRC = $(addprefix srcs/, $(SRCS))
 

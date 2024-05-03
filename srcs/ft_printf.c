@@ -6,7 +6,7 @@
 /*   By: zaiicko <meskrabe@student.s19.be>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 03:40:19 by zaiicko           #+#    #+#             */
-/*   Updated: 2024/05/02 04:16:19 by zaiicko          ###   ########.fr       */
+/*   Updated: 2024/05/03 02:09:58 by zaiicko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ int	ft_printf(const char *str, ...)
 		{
 			str++;
 			i += ft_checking(arg, *str);
+			va_arg(arg, int);
 		}
 		else
 			i += ft_putchar_f(*str);

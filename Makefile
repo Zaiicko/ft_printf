@@ -6,7 +6,7 @@
 #    By: zaiicko <meskrabe@student.s19.be>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/21 01:07:41 by zaiicko           #+#    #+#              #
-#    Updated: 2024/05/02 02:33:39 by zaiicko          ###   ########.fr        #
+#    Updated: 2024/05/03 16:52:01 by zaiicko          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,7 @@ INC = -I$(INC_DIR) -I$(LIBFT_DIR)
 SRCS =	ft_printf.c \
 		ft_checking.c \
 		ft_putchar_f.c \
+		ft_putstr_f.c \
 
 SRC = $(addprefix srcs/, $(SRCS))
 

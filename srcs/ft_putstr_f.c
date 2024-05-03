@@ -1,22 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_checking.c                                      :+:      :+:    :+:   */
+/*   ft_putstr_f.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zaiicko <meskrabe@student.s19.be>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/02 02:00:58 by zaiicko           #+#    #+#             */
-/*   Updated: 2024/05/03 16:54:35 by zaiicko          ###   ########.fr       */
+/*   Created: 2024/05/03 16:20:32 by zaiicko           #+#    #+#             */
+/*   Updated: 2024/05/03 16:58:41 by zaiicko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/ft_printf.h"
 
-size_t	ft_checking(va_list arg, char c)
+int	ft_putstr_f(char *str)
 {
-	if (c == 'c')
-		return (ft_putchar_f(va_arg(arg, int)));
-	if (c == 's')
-		return (ft_putstr_f(va_arg(arg, char * )));
-	return (0);
+	size_t	i;
+
+	i = 0;
+	while(str[i])
+	{
+		ft_putchar_f(str[i]);
+		i++;
+	}
+	return (i);
 }

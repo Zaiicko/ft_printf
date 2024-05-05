@@ -6,7 +6,7 @@
 #    By: zaiicko <meskrabe@student.s19.be>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/21 01:07:41 by zaiicko           #+#    #+#              #
-#    Updated: 2024/05/03 16:52:01 by zaiicko          ###   ########.fr        #
+#    Updated: 2024/05/05 16:30:08 by zaiicko          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,22 +28,22 @@ SRC = $(addprefix srcs/, $(SRCS))
 OBJ = $(SRC:.c=.o)
 
 .c.o:
-		$(CC) $(CFLAGS) -c $< -o $@ $(INC)
+		@$(CC) $(CFLAGS) -c $< -o $@ $(INC)
 
 $(NAME):	$(OBJ)
-			make -C $(LIBFT_DIR)
-			cp $(LIBFT) $(NAME)
-			ar rcs $(NAME) $(OBJ)
+			@make -C $(LIBFT_DIR)
+			@cp $(LIBFT) $(NAME)
+			@ar rcs $(NAME) $(OBJ)
 
 all:	$(NAME)
 
 clean:
-			$(RM) $(OBJ)
-			make clean -C libft
+			@$(RM) $(OBJ)
+			@make clean -C libft
 
 fclean: clean
-		$(RM) $(NAME)
-		make fclean -C libft
+		@$(RM) $(NAME)
+		@make fclean -C libft
 
 re:		fclean all
 

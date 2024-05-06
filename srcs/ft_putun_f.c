@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_unsigned.c                                :+:      :+:    :+:   */
+/*   ft_putun_f.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zaiicko <meskrabe@student.s19.be>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 17:53:29 by zaiicko           #+#    #+#             */
-/*   Updated: 2024/05/06 20:42:21 by zaiicko          ###   ########.fr       */
+/*   Updated: 2024/05/07 00:23:33 by zaiicko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static void	ft_putnbrbase(unsigned int nb, char *str)
 
 int	ft_count_unsigned(unsigned int nb, char *str)
 {
-	int	i;
+	size_t	i;
 	int	base;
 
 	if (!str)

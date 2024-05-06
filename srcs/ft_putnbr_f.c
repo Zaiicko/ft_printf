@@ -1,46 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_unsigned.c                                :+:      :+:    :+:   */
+/*   ft_putnbr_f.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zaiicko <meskrabe@student.s19.be>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/06 17:53:29 by zaiicko           #+#    #+#             */
-/*   Updated: 2024/05/06 20:42:21 by zaiicko          ###   ########.fr       */
+/*   Created: 2024/05/06 20:22:42 by zaiicko           #+#    #+#             */
+/*   Updated: 2024/05/06 20:52:35 by zaiicko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/ft_printf.h"
-
-static void	ft_putnbrbase(unsigned int nb, char *str)
+static int ft_putnbr_f(int nb)
 {
-	unsigned int	base;
+	long i;
 
-	base = ft_strlen(str);
-	if (nb >= base)
+	i =(long)nb;
+	if (i <0)
 	{
-		ft_putnbrbase(nb / base, str);
-		ft_putnbrbase(nb % base, str);
+		ft_putchar_f('-');
+		i *= -1;
 	}
-	if (nb < base)
-		ft_putchar_f(str[nb]);
+	if ( i > 9)
+		ft_putnbr_f(i / 10);
+	ft_putnbr_f((i % 10) + 48);
 }
 
-int	ft_count_unsigned(unsigned int nb, char *str)
+int ft_count_nbr(int nb)
 {
-	int	i;
-	int	base;
-
-	if (!str)
-		return (0);
+	int i;
+	
 	i = 0;
-	base = ft_strlen(str);
-	ft_putnbrbase(nb, str);
+	ft_putnbr_f(nb);
 	if (nb == 0)
 		return (1);
+	if (nb < 0)
+	{
+		i++;
+		nb = -nb;
+	}
 	while (nb > 0)
 	{
-		nb = nb / base;
+		nb = nb / 10;
 		i++;
 	}
 	return (i);

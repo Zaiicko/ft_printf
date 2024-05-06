@@ -6,7 +6,7 @@
 #    By: zaiicko <meskrabe@student.s19.be>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/21 01:07:41 by zaiicko           #+#    #+#              #
-#    Updated: 2024/05/05 16:30:08 by zaiicko          ###   ########.fr        #
+#    Updated: 2024/05/06 19:14:53 by zaiicko          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,6 +22,7 @@ SRCS =	ft_printf.c \
 		ft_checking.c \
 		ft_putchar_f.c \
 		ft_putstr_f.c \
+		ft_print_unsigned.c \
 
 SRC = $(addprefix srcs/, $(SRCS))
 

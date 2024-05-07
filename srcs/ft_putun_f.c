@@ -6,7 +6,7 @@
 /*   By: zaiicko <meskrabe@student.s19.be>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 17:53:29 by zaiicko           #+#    #+#             */
-/*   Updated: 2024/05/07 00:23:33 by zaiicko          ###   ########.fr       */
+/*   Updated: 2024/05/07 03:23:24 by zaiicko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,10 @@ static void	ft_putnbrbase(unsigned int nb, char *str)
 		ft_putchar_f(str[nb]);
 }
 
-int	ft_count_unsigned(unsigned int nb, char *str)
+int	ft_putun_f(unsigned int nb, char *str)
 {
 	size_t	i;
-	int	base;
+	int		base;
 
 	if (!str)
 		return (0);

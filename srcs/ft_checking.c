@@ -6,7 +6,7 @@
 /*   By: zaiicko <meskrabe@student.s19.be>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 02:00:58 by zaiicko           #+#    #+#             */
-/*   Updated: 2024/05/06 19:26:20 by zaiicko          ###   ########.fr       */
+/*   Updated: 2024/05/07 03:18:18 by zaiicko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,12 @@ size_t	ft_checking(va_list arg, char c)
 	else if (c == '%')
 		return (ft_putchar_f('%'));
 	else if (c == 'u')
-		return (ft_count_unsigned(va_arg(arg, unsigned int), "0123456789"));
+		return (ft_putun_f(va_arg(arg, unsigned int), "0123456789"));
 	else if (c == 'x')
-		return (ft_count_unsigned(va_arg(arg, unsigned int), "0123456789abcdef"));
+		return (ft_putun_f(va_arg(arg, unsigned int), "0123456789abcdef"));
 	else if (c == 'X')
-		return (ft_count_unsigned(va_arg(arg, unsigned int), "0123456789ABCDEF"));
+		return (ft_putun_f(va_arg(arg, unsigned int), "0123456789ABCDEF"));
+	else if (c == 'd' || c == 'i')
+		return (ft_putnbr_int(va_arg(arg, int)));
 	return (0);
 }

@@ -6,7 +6,7 @@
 #    By: zaiicko <meskrabe@student.s19.be>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/21 01:07:41 by zaiicko           #+#    #+#              #
-#    Updated: 2024/05/07 00:50:19 by zaiicko          ###   ########.fr        #
+#    Updated: 2024/05/07 21:04:03 by zaiicko          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,6 +24,7 @@ SRCS =	ft_printf.c \
 		ft_putstr_f.c \
 		ft_putun_f.c \
 		ft_putnbr_f.c \
+		ft_putpointer.c \
 
 SRC = $(addprefix srcs/, $(SRCS))
 

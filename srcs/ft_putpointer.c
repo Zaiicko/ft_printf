@@ -1,28 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_putpointer.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zaiicko <meskrabe@student.s19.be>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/02 19:22:22 by zaiicko           #+#    #+#             */
-/*   Updated: 2024/05/07 21:04:16 by zaiicko          ###   ########.fr       */
+/*   Created: 2024/05/07 20:54:28 by zaiicko           #+#    #+#             */
+/*   Updated: 2024/05/07 21:06:05 by zaiicko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "../inc/ft_printf.h"
 
-# include "../libft/libft.h"
-# include "stdarg.h"
-# include "stdio.h"
+int	ft_putpointer(char *str)
+{
+	size_t	i;
 
-int		ft_printf(const char *str, ...);
-int		ft_putchar_f(char c);
-int		ft_putstr_f(char *str);
-size_t	ft_checking(va_list arg, char c);
-int		ft_putun_f(unsigned int nb, char *str);
-int 	ft_putnbr_int(int nb);
-int		ft_putpointer(char *str);
-
-#endif
+	if (!str)
+		return (0);
+	i = ft_putstr_f("0x");
+	return (i);
+}

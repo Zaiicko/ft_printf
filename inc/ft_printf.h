@@ -6,7 +6,7 @@
 /*   By: zaiicko <meskrabe@student.s19.be>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 19:22:22 by zaiicko           #+#    #+#             */
-/*   Updated: 2024/05/08 02:00:12 by zaiicko          ###   ########.fr       */
+/*   Updated: 2024/05/08 02:17:50 by zaiicko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,6 @@ size_t	ft_checking(va_list *arg, char c);
 int		ft_putun_f(unsigned int nb, char *str);
 int 	ft_putnbr_int(int nb);
 int		ft_putpointer(char *str);
+void	ft_putnbrbase(unsigned int nb, char *str);
 
 #endif

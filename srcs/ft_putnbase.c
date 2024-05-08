@@ -1,33 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putun_f.c                                       :+:      :+:    :+:   */
+/*   ft_putnbase.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zaiicko <meskrabe@student.s19.be>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/06 17:53:29 by zaiicko           #+#    #+#             */
-/*   Updated: 2024/05/08 02:15:31 by zaiicko          ###   ########.fr       */
+/*   Created: 2024/05/08 02:14:17 by zaiicko           #+#    #+#             */
+/*   Updated: 2024/05/08 02:15:03 by zaiicko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/ft_printf.h"
 
-int	ft_putun_f(unsigned int nb, char *str)
+void	ft_putnbrbase(unsigned int nb, char *str)
 {
-	size_t	i;
-	int		base;
+	unsigned int	base;
 
-	if (!str)
-		return (0);
-	i = 0;
 	base = ft_strlen(str);
-	ft_putnbrbase(nb, str);
-	if (nb == 0)
-		return (1);
-	while (nb > 0)
+	if (nb >= base)
 	{
-		nb = nb / base;
-		i++;
+		ft_putnbrbase(nb / base, str);
+		ft_putnbrbase(nb % base, str);
 	}
-	return (i);
+	if (nb < base)
+		ft_putchar_f(str[nb]);
 }

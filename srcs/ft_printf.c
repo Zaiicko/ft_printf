@@ -6,7 +6,7 @@
 /*   By: zaiicko <meskrabe@student.s19.be>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 03:40:19 by zaiicko           #+#    #+#             */
-/*   Updated: 2024/05/06 18:11:43 by zaiicko          ###   ########.fr       */
+/*   Updated: 2024/05/08 01:40:51 by zaiicko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	ft_printf(const char *str, ...)
 		if (*str == '%' && *(str + 1) != '\0')
 		{
 			str++;
-			i += ft_checking(arg, *str);
+			i += ft_checking(&arg, *str);
 		}
 		else
 			i += ft_putchar_f(*str);

@@ -6,7 +6,7 @@
 /*   By: zaiicko <meskrabe@student.s19.be>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 02:00:58 by zaiicko           #+#    #+#             */
-/*   Updated: 2024/05/08 01:41:26 by zaiicko          ###   ########.fr       */
+/*   Updated: 2024/05/08 02:27:12 by zaiicko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,6 @@ size_t	ft_checking(va_list *arg, char c)
 	else if (c == 'd' || c == 'i')
 		return (ft_putnbr_int(va_arg(*arg, int)));
 	else if (c == 'p')
-		return (ft_putpointer(va_arg(*arg, void *)));
+		return (ft_putpointer(va_arg(*arg, void *), "0123456789abcdef"));
 	return (0);
 }

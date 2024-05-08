@@ -6,7 +6,7 @@
 /*   By: zaiicko <meskrabe@student.s19.be>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 17:53:29 by zaiicko           #+#    #+#             */
-/*   Updated: 2024/05/08 02:15:31 by zaiicko          ###   ########.fr       */
+/*   Updated: 2024/05/08 14:48:00 by zaiicko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_putun_f(unsigned int nb, char *str)
 		return (0);
 	i = 0;
 	base = ft_strlen(str);
-	ft_putnbrbase(nb, str);
+	ft_putnbase(nb, str);
 	if (nb == 0)
 		return (1);
 	while (nb > 0)

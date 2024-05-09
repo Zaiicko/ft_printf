@@ -6,7 +6,7 @@
 /*   By: zaiicko <meskrabe@student.s19.be>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/07 20:54:28 by zaiicko           #+#    #+#             */
-/*   Updated: 2024/05/08 14:49:26 by zaiicko          ###   ########.fr       */
+/*   Updated: 2024/05/09 03:06:53 by zaiicko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,15 @@ int	ft_putpointer(void *ptr, char *str)
 	size_t	i;
 	int		base;
 
-	if (!ptr || !str)
+	if (!str)
 		return (0);
+	if (!ptr)
+		return (ft_putstr_f("0x0"));
 	nb = (size_t)ptr;
 	base = ft_strlen(str);
 	i = ft_putstr_f("0x");
-	ft_putnbase(nb, str);
-	if (nb == 0)
-		return (i + 1);
+	ft_putnbase(nb / base, str);
+	ft_putnbase(nb % base, str);
 	while (nb > 0)
 	{
 		nb = nb / base;

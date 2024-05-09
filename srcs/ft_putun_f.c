@@ -6,13 +6,13 @@
 /*   By: zaiicko <meskrabe@student.s19.be>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 17:53:29 by zaiicko           #+#    #+#             */
-/*   Updated: 2024/05/08 14:48:00 by zaiicko          ###   ########.fr       */
+/*   Updated: 2024/05/09 02:32:00 by zaiicko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/ft_printf.h"
 
-int	ft_putun_f(unsigned int nb, char *str)
+int	ft_putun_f(size_t nb, char *str)
 {
 	size_t	i;
 	int		base;

@@ -6,7 +6,7 @@
 /*   By: zaiicko <meskrabe@student.s19.be>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 20:22:42 by zaiicko           #+#    #+#             */
-/*   Updated: 2024/05/09 03:17:55 by zaiicko          ###   ########.fr       */
+/*   Updated: 2024/05/09 03:37:15 by zaiicko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static void	ft_putnbr_f(int nb)
 	ft_putchar_f((i % 10) + 48);
 }
 
-int	ft_putnbr_int(int nb)
+ssize_t	ft_putnbr_int(ssize_t nb)
 {
 	size_t	i;
 

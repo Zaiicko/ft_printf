@@ -24,9 +24,10 @@
 Here is an example of using `ft_printf` in a C program:
 
 ```c
-#include "ft_printf.h"
+#include "inc/ft_printf.h"
 
-int main() {
+int main()
+{
     ft_printf("Hello, World!\n");
     ft_printf("Character: %c\n", 'A');
     ft_printf("String: %s\n", "This is a string");
@@ -38,7 +39,7 @@ int main() {
     ft_printf("Hexadecimal (uppercase): %X\n", 255);
     ft_printf("Percent sign: %%\n");
 
-    return 0;
+    return (0);
 }
 ```
 
